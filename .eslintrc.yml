@@ -8,6 +8,10 @@ extends:
   - bayathy
   - plugin:tailwindcss/recommend
 
+plugins:
+  - jest-dom
+  - testing-library
+
 parserOptions:
   ecmaFeatures:
     jsx: true
