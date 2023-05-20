@@ -6,7 +6,7 @@ env:
 
 extends:
   - bayathy
-  - plugin:tailwindcss/recommend
+  - plugin:storybook/recommended
 
 plugins:
   - jest-dom
