@@ -1,12 +1,7 @@
-import { css } from "@linaria/core";
-
-// Write your styles in `styled` tag
-const Title = css`
-  font-size: 2rem;
-`;
+import { Button } from "./components/ui/button/button";
 
 function App() {
-  return <h1 className={Title}>test</h1>;
+  return <Button>test</Button>;
 }
 
 export default App;
