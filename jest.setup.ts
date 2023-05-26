@@ -1,4 +1,3 @@
-import React from "react";
+// eslint-disable-next-line import/default
 import "@testing-library/jest-dom";
-
-global.React = React;
+import "@testing-library/jest-dom/extend-expect";
