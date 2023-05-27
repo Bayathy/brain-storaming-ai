@@ -20,6 +20,7 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["jest", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["./src"],
+  "exclude": [".stylelintrc"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
