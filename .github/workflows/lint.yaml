@@ -9,11 +9,11 @@ permissions:
 
 jobs:
   CI:
-    runs-on: ubunts-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-deps: "1"
+          fetch-deps: 0
 
       - uses: actions/setup-node@v3
         with:
