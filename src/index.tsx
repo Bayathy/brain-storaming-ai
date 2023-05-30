@@ -1,7 +1,11 @@
-import { Button } from "./components/ui/button/button";
+import { globalStyle } from "./style/global";
 
 function App() {
-  return <Button>test</Button>;
+  return (
+    <div className={globalStyle}>
+      <p>aaa</p>
+    </div>
+  );
 }
 
 export default App;
