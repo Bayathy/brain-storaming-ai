@@ -15,7 +15,23 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  render: () => <Button>Test</Button>,
+  args: {
+    children: "test",
+    color: "primary",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
+
+    await userEvent.click(button);
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: "test",
+    color: "secondary",
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole("button");

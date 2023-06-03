@@ -1,10 +1,42 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentPropsWithoutRef } from "react";
+import * as React from "react";
 
 import { css } from "@linaria/core";
 
-const buttonStyle = css`  color: red;
+type ButtonProps = {
+  color?: "primary" | "secondary" | "extra";
+} & ComponentPropsWithoutRef<"button">;
+
+const buttonStyle = css`
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  &[data-color="primary"] {
+    background: #008cff;
+    :hover {
+      opacity: 0.8;
+    }
+  }
+
+  &[data-color="secondary"] {
+    background-color: #07ca00;
+    :hover {
+      opacity: 0.8;
+    }
+  }
+
+  :disabled {
+    background-color: gray;
+  }
 `;
 
-export function Button({ children }: PropsWithChildren): JSX.Element {
-  return <button className={buttonStyle}>{children}</button>;
-}
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  function ({ children, color = "primary", ...props }, ref) {
+    return (
+      <button className={buttonStyle} ref={ref} {...props} data-color={color}>
+        {children}
+      </button>
+    );
+  }
+);
