@@ -1,0 +1,16 @@
+import { {{properCase name}} } from "./{{name}}";
+
+import type { Meta, StoryObj } from "@storybook/react";
+
+const meta = {
+  title: "component",
+  component: {{properCase name}},
+} satisfies Meta<typeof {{properCase name}}>;
+
+export default meta;
+
+export const Default: StoryObj<typeof {{properCase name}}> = {
+  args: {
+    titleText: "AI storming",
+  },
+};
