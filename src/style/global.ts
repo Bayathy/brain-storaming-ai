@@ -1,16 +1,21 @@
 import { css } from "@linaria/core";
 
 export const globalStyle = css`
-  :global() {
-    * {
-      margin: 0;
-      padding: 0;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-      --backgorund: #fff;
-    }
+  :root {
+    --backgorund: #fff;
+    --primary: #008cff;
+    --secondary: #07ca00;
 
-    body {
-      background-color: var(--backgorund);
-    }
+    --padding-sm: 8px;
+  }
+
+  body {
+    background-color: var(--backgorund);
   }
 `;
