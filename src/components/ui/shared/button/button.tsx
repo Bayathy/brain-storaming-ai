@@ -13,14 +13,14 @@ const buttonStyle = css`
   padding: 0.5rem 1rem;
   border-radius: 20px;
   &[data-color="primary"] {
-    background: #008cff;
+    background: var(--primary);
     :hover {
       opacity: 0.8;
     }
   }
 
   &[data-color="secondary"] {
-    background-color: #07ca00;
+    background-color: var(--secondary);
     :hover {
       opacity: 0.8;
     }
