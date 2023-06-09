@@ -1,5 +1,5 @@
-import { RootLayout } from "../components/Layout/RootLayout/root-layout";
 import { Header } from "../feature/header";
+import { RootLayout } from "../shared/Layout/RootLayout/root-layout";
 import { globalStyle } from "../style/global";
 
 export function App() {

@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix ./src && prettier -w ./src && stylelint ./src/**/*.{css,js,jsx,ts,tsx} --fix",
     "fmt": "prettier -w ./src",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev --ci -p 6006",
     "build-storybook": "storybook build",
     "test": "jest --watch",
     "test:ci": "jest --ci",
