@@ -11,7 +11,7 @@ const buttonStyle = css`
   color: white;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   &[data-color="primary"] {
     background: var(--primary);
     :hover {

@@ -17,6 +17,8 @@
     "generate": "plop --plopfile src/generators/plopfile.js"
   },
   "dependencies": {
+    "@fontsource/noto-sans-jp": "^5.0.2",
+    "@unocss/reset": "^0.53.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -25,6 +27,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.5",
     "@bayathy/eslint-config": "^1.1.0",
+    "@iconify/react": "^4.1.0",
     "@linaria/babel-preset": "^4.4.5",
     "@linaria/core": "^4.2.10",
     "@linaria/react": "^4.3.8",
@@ -39,7 +42,6 @@
     "@storybook/react": "7.0.12",
     "@storybook/react-vite": "7.0.12",
     "@storybook/testing-library": "0.0.14-next.2",
-    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -58,6 +60,7 @@
     "eslint-plugin-react-refresh": "^0.3.5",
     "eslint-plugin-storybook": "^0.6.12",
     "eslint-plugin-testing-library": "^5.11.0",
+    "iconify": "^1.4.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "plop": "^3.1.2",

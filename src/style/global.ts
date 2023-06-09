@@ -7,9 +7,8 @@ export const globalStyle = css`
       padding: 0;
       box-sizing: border-box;
     }
-
     :root {
-      --backgorund: #fff;
+      --backgorund: #ebebeb;
       --primary: #008cff;
       --secondary: #07ca00;
 
@@ -18,6 +17,7 @@ export const globalStyle = css`
 
     body {
       background-color: var(--backgorund);
+      font-family: "Noto Sans JP", sans-serif;
     }
   }
 `;
