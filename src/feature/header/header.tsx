@@ -25,7 +25,7 @@ const title = css`
   color: white;
 `;
 
-export function ViewHeader({ titleText }: HeaderProps) {
+export function Header({ titleText }: HeaderProps) {
   return (
     <header className={header}>
       <div className={headerContent}>

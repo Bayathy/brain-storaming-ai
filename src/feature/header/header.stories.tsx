@@ -1,15 +1,15 @@
-import { ViewHeader } from "./view-header";
+import { Header } from "./header";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
   title: "Header",
-  component: ViewHeader,
-} satisfies Meta<typeof ViewHeader>;
+  component: Header,
+} satisfies Meta<typeof Header>;
 
 export default meta;
 
-export const Default: StoryObj<typeof ViewHeader> = {
+export const Default: StoryObj<typeof Header> = {
   args: {
     titleText: "AI storming",
   },

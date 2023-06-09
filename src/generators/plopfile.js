@@ -15,7 +15,8 @@ export default function (plop) {
         type: "add",
         path: "../components/feature/{{name}}/{{name}}.tsx",
         templateFile: "./component-template.tsx.hbs",
-      },{
+      },
+      {
         type: "add",
         path: "../components/feature/{{name}}/index.tsx",
         templateFile: "./index-template.tsx.hbs",

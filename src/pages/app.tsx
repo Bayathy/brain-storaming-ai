@@ -1,12 +1,12 @@
-import { ViewHeader } from "../components/feature/view-header";
-import { RootLayout } from "../components/ui/Layout/RootLayout/root-layout";
+import { RootLayout } from "../components/Layout/RootLayout/root-layout";
+import { Header } from "../feature/header";
 import { globalStyle } from "../style/global";
 
 export function App() {
   return (
     <div className={globalStyle}>
       <RootLayout
-        header={<ViewHeader titleText="AI storming" />}
+        header={<Header titleText="AI storming" />}
         content={<p>test</p>}
         footer={<></>}
       />
