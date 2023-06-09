@@ -9,8 +9,8 @@ type MenuProps = {
   menuListItems: MenuListItemProps[];
 };
 
-const menu = css`
-  position: fixed;
+const menu = css`position: fixed;
+  margin: 1% 8px;
   display: grid;
   height: 98%;
   width: max-content;
@@ -18,19 +18,16 @@ const menu = css`
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   border-radius: 10px;
-  margin: 1% 8px;
 `;
 
-const menuHeader = css`
-  display: grid;
+const menuHeader = css`display: grid;
   align-items: center;
   padding: var(--spacing-lg);
   height: min-content;
   font-size: 1.5rem;
 `;
 
-const menuList = css`
-  padding-inline: var(--spacing-sm);
+const menuList = css`padding-inline: var(--spacing-sm);
   display: flex;
   flex-direction: column;
   gap: 1rem;

@@ -1,9 +1,13 @@
 {
   "extends": [
     "@linaria/stylelint-config-standard-linaria",
-    "stylelint-config-standard"
+    "stylelint-config-standard",
+    "stylelint-config-recommended"
   ],
-  "rules": {
-    "rule-empty-line-before": null
-  }
+  "overrides": [
+    {
+      "files": ["**/*.{jsx,tsx}"],
+      "customSyntax": "@stylelint/postcss-css-in-js"
+    }
+  ]
 }

@@ -72,6 +72,9 @@ devDependencies:
   '@storybook/testing-library':
     specifier: 0.0.14-next.2
     version: 0.0.14-next.2
+  '@stylelint/postcss-css-in-js':
+    specifier: ^0.38.0
+    version: 0.38.0(postcss-syntax@0.36.2)(postcss@8.4.23)
   '@testing-library/jest-dom':
     specifier: ^5.16.5
     version: 5.16.5
@@ -3427,6 +3430,20 @@ packages:
       '@types/babel__core': 7.20.0
       '@types/express': 4.17.17
       file-system-cache: 2.3.0
+    dev: true
+
+  /@stylelint/postcss-css-in-js@0.38.0(postcss-syntax@0.36.2)(postcss@8.4.23):
+    resolution: {integrity: sha512-XOz5CAe49kS95p5yRd+DAIWDojTjfmyAQ4bbDlXMdbZTQ5t0ThjSLvWI6JI2uiS7MFurVBkZ6zUqcimzcLTBoQ==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      postcss: '>=7.0.0'
+      postcss-syntax: '>=0.36.2'
+    dependencies:
+      '@babel/core': 7.21.8
+      postcss: 8.4.23
+      postcss-syntax: 0.36.2(postcss@8.4.23)
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@testing-library/dom@8.20.0:

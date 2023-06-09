@@ -7,8 +7,7 @@ export type MenuListItemProps = {
   icon: string;
 };
 
-const menuButton = css`
-  display: grid;
+const menuButton = css`display: grid;
   width: 10rem;
   height: 3rem;
   font-size: 1.3rem;
@@ -16,13 +15,13 @@ const menuButton = css`
   grid-template-columns: 1.3rem auto;
   padding-inline: var(--spacing-sm);
   border-radius: 10px;
+
   :hover {
     background: var(--backgorund);
   }
 `;
 
-const menuIcon = css`
-  width: 100%;
+const menuIcon = css`width: 100%;
   height: 100%;
 `;
 

@@ -5,8 +5,7 @@ type RootLayoutProps = {
   content: React.ReactNode;
 };
 
-const layout = css`
-  width: 100vw;
+const layout = css`width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: grid;

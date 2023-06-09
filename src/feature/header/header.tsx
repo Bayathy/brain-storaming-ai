@@ -4,14 +4,12 @@ type HeaderProps = {
   titleText: string;
 };
 
-const header = css`
-  width: 100%;
+const header = css`width: 100%;
   height: 64px;
   background: var(--primary);
 `;
 
-const headerContent = css`
-  max-width: 1000px;
+const headerContent = css`max-width: 1000px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -19,8 +17,7 @@ const headerContent = css`
   margin: auto;
 `;
 
-const title = css`
-  font-size: 1.5rem;
+const title = css`font-size: 1.5rem;
   font-weight: normal;
   color: white;
 `;
