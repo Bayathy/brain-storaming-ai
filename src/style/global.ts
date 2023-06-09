@@ -12,7 +12,12 @@ export const globalStyle = css`
       --primary: #008cff;
       --secondary: #07ca00;
 
-      --padding-sm: 8px;
+      --menu-width: 12rem;
+
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
     }
 
     body {

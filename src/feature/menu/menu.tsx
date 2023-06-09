@@ -13,7 +13,6 @@ const menu = css`
   position: fixed;
   display: grid;
   height: 100vh;
-  width: max-content;
   background-color: white;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
@@ -22,12 +21,13 @@ const menu = css`
 const menuHeader = css`
   display: grid;
   align-items: center;
-  padding: var(--padding-sm);
-  height: 5rem;
+  padding: var(--spacing-lg);
+  height: min-content;
+  font-size: 1.5rem;
 `;
 
 const menuList = css`
-  padding-inline: var(--padding-sm);
+  padding-inline: var(--spacing-sm);
   display: flex;
   flex-direction: column;
   gap: 1rem;

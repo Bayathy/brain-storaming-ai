@@ -1,9 +1,8 @@
 import { css } from "@linaria/core";
 
 type RootLayoutProps = {
-  header: React.ReactNode;
+  menu: React.ReactNode;
   content: React.ReactNode;
-  footer: React.ReactNode;
 };
 
 const layout = css`
@@ -11,15 +10,19 @@ const layout = css`
   height: 100vh;
   overflow: hidden;
   display: grid;
-  grid-template: "header" auto "content" 1fr "footer" auto/ 1fr;
+  grid-template-columns: var(--menu-width) 1fr;
 `;
 
-export function RootLayout({ header, content, footer }: RootLayoutProps) {
+const menuBlock = css`
+  position: relative;
+  width: max-content;
+`;
+
+export function RootLayout({ menu, content }: RootLayoutProps) {
   return (
     <div className={layout}>
-      <div>{header}</div>
+      <div className={menuBlock}>{menu}</div>
       <div>{content}</div>
-      <div>{footer}</div>
     </div>
   );
 }
