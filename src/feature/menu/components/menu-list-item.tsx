@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { css } from "@linaria/core";
 
 export type MenuListItemProps = {
+  key: number;
   itemTitle: string;
   icon: string;
 };
