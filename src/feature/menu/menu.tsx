@@ -12,10 +12,13 @@ type MenuProps = {
 const menu = css`
   position: fixed;
   display: grid;
-  height: 100vh;
+  height: 98%;
+  width: max-content;
   background-color: white;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  border-radius: 10px;
+  margin: 1% 8px;
 `;
 
 const menuHeader = css`

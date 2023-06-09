@@ -12,10 +12,9 @@ const menuButton = css`
   width: 10rem;
   height: 3rem;
   font-size: 1.3rem;
-  text-align: center;
   align-items: center;
   grid-template-columns: 1.3rem auto;
-  padding-inline: var(--padding-sm);
+  padding-inline: var(--spacing-sm);
   border-radius: 10px;
   :hover {
     background: var(--backgorund);

@@ -13,15 +13,10 @@ const layout = css`
   grid-template-columns: var(--menu-width) 1fr;
 `;
 
-const menuBlock = css`
-  position: relative;
-  width: max-content;
-`;
-
 export function RootLayout({ menu, content }: RootLayoutProps) {
   return (
     <div className={layout}>
-      <div className={menuBlock}>{menu}</div>
+      <div>{menu}</div>
       <div>{content}</div>
     </div>
   );
