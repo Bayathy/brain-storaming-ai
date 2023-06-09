@@ -1,6 +1,8 @@
 import type { Preview } from "@storybook/react";
 import React from "react";
 import { globalStyle } from "../src/style/global";
+import "@unocss/reset/tailwind.css";
+import "@fontsource/noto-sans-jp";
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +12,15 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    background: {
+      default: "default",
+      values: [
+        {
+          name: "default",
+          value: "#",
+        },
+      ],
     },
   },
   decorators: [
