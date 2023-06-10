@@ -21,7 +21,8 @@
     "@unocss/reset": "^0.53.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recoil": "^0.7.7"
+    "recoil": "^0.7.7",
+    "wouter": "^2.11.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",
