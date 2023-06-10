@@ -12,7 +12,7 @@ export const globalStyle = css`
       --primary: #008cff;
       --secondary: #07ca00;
 
-      --menu-width: 12rem;
+      --menu-width: 3rem;
 
       --spacing-sm: 8px;
       --spacing-md: 16px;

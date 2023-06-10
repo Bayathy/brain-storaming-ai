@@ -1,3 +1,4 @@
+import { Header } from "../feature/header";
 import { Menu } from "../feature/menu";
 import { RootLayout } from "../shared/Layout/RootLayout/root-layout";
 import { globalStyle } from "../style/global";
@@ -6,9 +7,9 @@ export function App() {
   return (
     <div className={globalStyle}>
       <RootLayout
+        header={<Header titleText="AI-storming" />}
         menu={
           <Menu
-            headerTitle="AI Storming"
             menuListItems={[
               {
                 key: 1,
@@ -17,17 +18,17 @@ export function App() {
               },
               {
                 key: 2,
-                icon: "ic:baseline-chat",
+                icon: "ic:twotone-event-note",
                 itemTitle: "Memo",
               },
               {
                 key: 3,
-                icon: "ic:baseline-chat",
+                icon: "ic:baseline-settings",
                 itemTitle: "Settings",
               },
               {
                 key: 4,
-                icon: "ic:baseline-chat",
+                icon: "ic:baseline-account-circle",
                 itemTitle: "Account",
               },
             ]}

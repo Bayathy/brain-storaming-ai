@@ -9,5 +9,8 @@
       "files": ["**/*.{jsx,tsx}"],
       "customSyntax": "@stylelint/postcss-css-in-js"
     }
-  ]
+  ],
+  "rules": {
+    "no-empty-first-line": null
+  }
 }

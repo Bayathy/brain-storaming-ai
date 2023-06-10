@@ -11,7 +11,6 @@ export default meta;
 
 export const Default: StoryObj<typeof Menu> = {
   args: {
-    headerTitle: "Menu",
     menuListItems: [
       {
         key: 1,
