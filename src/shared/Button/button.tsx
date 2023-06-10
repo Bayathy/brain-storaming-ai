@@ -7,7 +7,8 @@ type ButtonProps = {
   color?: "primary" | "secondary" | "extra";
 } & ComponentPropsWithoutRef<"button">;
 
-const buttonStyle = css`color: white;
+const buttonStyle = css`
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 10px;

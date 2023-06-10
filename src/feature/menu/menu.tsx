@@ -1,5 +1,7 @@
 import { css } from "@linaria/core";
+import { useRecoilState } from "recoil";
 
+import { menuActiveStore } from "./api/active-state";
 import { MenuListItem } from "./components/menu-list-item";
 
 import type { MenuListItemProps } from "./components/menu-list-item";
@@ -26,11 +28,17 @@ const menuList = css`
 `;
 
 export function Menu({ menuListItems }: MenuProps) {
+  const [activeState] = useRecoilState(menuActiveStore);
+
   return (
     <nav className={menu}>
       <ul className={menuList}>
         {menuListItems.map((index) => (
-          <MenuListItem {...index} />
+          <MenuListItem
+            key={index.id}
+            {...index}
+            acitveState={activeState === index.id ? "active" : "none"}
+          />
         ))}
       </ul>
     </nav>

@@ -1,17 +1,26 @@
+import { memo } from "react";
+
 import { Icon } from "@iconify/react";
 import { css } from "@linaria/core";
 import * as Tooltip from "@radix-ui/react-tooltip";
+import { useSetRecoilState } from "recoil";
+import { menuActiveStore } from "../api/active-state";
 
 export type MenuListItemProps = {
-  key: number;
+  id: number;
   itemTitle: string;
   icon: string;
+  acitveState: "active" | "none";
 };
 
 const menuButton = css`
   height: 2rem;
   width: 2rem;
   border-radius: 10px;
+
+  & [data-active="active"] {
+    color: var(--primary);
+  }
 
   :hover {
     background: var(--backgorund);
@@ -51,14 +60,30 @@ const toolTipArrow = css`
   fill: var(--primary);
 `;
 
-export function MenuListItem({ icon, itemTitle }: MenuListItemProps) {
+export const MenuListItem = memo<MenuListItemProps>(function ({
+  id,
+  icon,
+  itemTitle,
+  acitveState,
+}) {
+  const setActiveState = useSetRecoilState(menuActiveStore);
+
   return (
     <li>
       <Tooltip.Provider>
         <Tooltip.Root delayDuration={300}>
           <Tooltip.Trigger asChild>
-            <button className={menuButton}>
-              <Icon className={menuIcon} icon={icon} />
+            <button
+              onClick={() => {
+                setActiveState(id);
+              }}
+              className={menuButton}
+            >
+              <Icon
+                data-active={acitveState}
+                className={menuIcon}
+                icon={icon}
+              />
             </button>
           </Tooltip.Trigger>
           <Tooltip.Portal>
@@ -75,4 +100,4 @@ export function MenuListItem({ icon, itemTitle }: MenuListItemProps) {
       </Tooltip.Provider>
     </li>
   );
-}
+});

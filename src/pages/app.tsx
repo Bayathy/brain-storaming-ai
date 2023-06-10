@@ -12,24 +12,28 @@ export function App() {
           <Menu
             menuListItems={[
               {
-                key: 1,
+                id: 1,
                 icon: "ic:baseline-chat",
                 itemTitle: "Home",
+                acitveState: "active",
               },
               {
-                key: 2,
+                id: 2,
                 icon: "ic:twotone-event-note",
                 itemTitle: "Memo",
+                acitveState: "none",
               },
               {
-                key: 3,
+                id: 3,
                 icon: "ic:baseline-settings",
                 itemTitle: "Settings",
+                acitveState: "none",
               },
               {
-                key: 4,
+                id: 4,
                 icon: "ic:baseline-account-circle",
                 itemTitle: "Account",
+                acitveState: "none",
               },
             ]}
           />

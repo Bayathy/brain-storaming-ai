@@ -3,6 +3,7 @@ import React from "react";
 import { globalStyle } from "../src/style/global";
 import "@unocss/reset/tailwind.css";
 import "@fontsource/noto-sans-jp";
+import { RecoilRoot } from "recoil";
 
 const preview: Preview = {
   parameters: {
@@ -25,9 +26,11 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <div className={globalStyle}>
-        <Story />
-      </div>
+      <RecoilRoot>
+        <div className={globalStyle}>
+          <Story />
+        </div>
+      </RecoilRoot>
     ),
   ],
 };
