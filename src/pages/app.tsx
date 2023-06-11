@@ -2,6 +2,8 @@ import { Header } from "../feature/header";
 import { Menu } from "../feature/menu";
 import { RootLayout } from "../shared/Layout/RootLayout/root-layout";
 import { globalStyle } from "../style/global";
+import { Router, Route } from "wouter";
+import { Home } from "./home";
 
 export function App() {
   return (
@@ -38,7 +40,11 @@ export function App() {
             ]}
           />
         }
-        content={<p>test</p>}
+        content={
+          <Router>
+            <Route path="/" component={Home} />
+          </Router>
+        }
       />
     </div>
   );
