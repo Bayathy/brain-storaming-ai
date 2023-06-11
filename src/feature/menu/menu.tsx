@@ -14,7 +14,7 @@ const menu = css`
   position: fixed;
   display: grid;
   height: 100%;
-  width: max-content;
+  width: var(--menu-width);
   background-color: white;
   justify-content: center;
 `;

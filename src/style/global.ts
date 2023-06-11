@@ -13,6 +13,7 @@ export const globalStyle = css`
       --secondary: #07ca00;
 
       --menu-width: 3rem;
+      --chat-list-width: 13rem;
 
       --spacing-sm: 8px;
       --spacing-md: 16px;
