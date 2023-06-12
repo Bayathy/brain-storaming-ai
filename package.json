@@ -31,7 +31,7 @@
     "@babel/preset-typescript": "^7.22.5",
     "@bayathy/eslint-config": "^1.2.1",
     "@bayathy/eslint-config-jest": "^1.1.0",
-    "@bayathy/eslint-config-react": "^1.1.1",
+    "@bayathy/eslint-config-react": "^1.1.2",
     "@iconify/react": "^4.1.0",
     "@linaria/babel-preset": "^4.4.5",
     "@linaria/core": "^4.2.10",
