@@ -3,27 +3,27 @@ import { ChatListItem } from "./components/chat-list-item";
 
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 
-const chatList = css`
+const chatListContainar = css`
   width: var(--chat-list-width);
   border-radius: 4px;
 
-  /* overflow-y: hidden; */
+  overflow: hidden;
   height: 100vh;
   position: fixed;
 
-  /* box-shadow: 0 2px 10px black; */
+  box-shadow: 0 2px 10px black/.7;
   background-color: white;
 
-  --scrollbar-size: 10px;
+  --scrollbar-size:8px;
 `;
 
 const chaListTitle = css`
   font-size: 1.4rem;
+
 `;
 
 const scrollAreaViewPort = css`
-  position: relative;
-  width: inherit;
+  width: 100%;
   height: 100%;
   border-radius: inherit;
 `;
@@ -31,25 +31,21 @@ const scrollAreaViewPort = css`
 const scrollAreaScrollBar = css`
   display: flex;
 
-  /* ensures no selection */
   user-select: none;
 
-  /* disable browser handling of all panning and zooming gestures on touch devices */
   touch-action: none;
   padding: 2px;
-  transition: background 160ms ease-out;
 
-  & [data-orientation="horizontal"] {
-    flex-direction: column;
-    height: var(--scrollbar-size);
+  &[data-orientation='vertical'] {
+    width: var(--scrollbar-size)
   }
 `;
 
 const scrollAreaThumb = css`
   flex: 1;
-  background: var(--mauve10);
-  border-radius: var(--scrollbar-size);
+  background: rgba(0,0,0,0.3);
   position: relative;
+  border-radius: var(--scrollbar-size);
 
   ::before {
     content: "";
@@ -64,14 +60,18 @@ const scrollAreaThumb = css`
   }
 `;
 
+const chatList = css`
+  margin: var(--spacing-sm);
+`
+
 export function ChatList() {
   return (
-    <ScrollArea.Root className={chatList}>
+    <ScrollArea.Root className={chatListContainar}>
       <ScrollArea.Viewport className={scrollAreaViewPort}>
-        <div>
+        <div className={chatList}>
           <h2 className={chaListTitle}>Chat List</h2>
           <ul>
-            {Array.from(Array(10).keys()).map((key) => (
+            {Array.from(Array(5).keys()).map((key) => (
               <ChatListItem key={key}></ChatListItem>
             ))}
           </ul>
@@ -83,7 +83,6 @@ export function ChatList() {
       >
         <ScrollArea.Thumb className={scrollAreaThumb} />
       </ScrollArea.Scrollbar>
-      <ScrollArea.Corner className="ScrollAreaCorner" />
     </ScrollArea.Root>
   );
 }

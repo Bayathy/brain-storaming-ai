@@ -4,7 +4,6 @@ const chatListItem = css`
   height: 6rem;
   border-radius: 10px;
   padding: var(--spacing-sm);
-  margin: var(--spacing-sm);
   line-clamp: 3;
   -webkit-line-clamp: 3;
   overflow: hidden;
