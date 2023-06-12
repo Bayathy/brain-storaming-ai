@@ -11,7 +11,8 @@ const chatListItem = css`
 `;
 
 const chatListText = css`
-  overflow-wrap: break-word;
+  word-wrap: break-word;
+  width: 100%;
   text-overflow: clip;
   font-size: 1rem;
 `;
@@ -19,7 +20,7 @@ const chatListText = css`
 export function ChatListItem() {
   return (
     <li className={chatListItem}>
-      <p className={chatListText}>test</p>
+      <p className={chatListText}>これはテストです。これはテストです。</p>
     </li>
   );
 }

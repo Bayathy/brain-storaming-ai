@@ -3,7 +3,7 @@ import * as ScrollArea from "@radix-ui/react-scroll-area";
 
 import { ChatListItem } from "./components/chat-list-item";
 
-const chatListContainar = css`
+const scrollAreaRoot = css`
   width: var(--chat-list-width);
   border-radius: 4px;
   overflow: hidden;
@@ -13,6 +13,12 @@ const chatListContainar = css`
   background-color: white;
 
   --scrollbar-size: 8px;
+`;
+
+const chatList = css`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
 const chaListTitle = css`
@@ -55,18 +61,18 @@ const scrollAreaThumb = css`
   }
 `;
 
-const chatList = css`
+const chatListContainer = css`
   margin: var(--spacing-sm);
 `;
 
 export function ChatList() {
   return (
-    <ScrollArea.Root className={chatListContainar}>
+    <ScrollArea.Root className={scrollAreaRoot}>
       <ScrollArea.Viewport className={scrollAreaViewPort}>
-        <div className={chatList}>
+        <div className={chatListContainer}>
           <h2 className={chaListTitle}>Chat List</h2>
-          <ul>
-            {[...Array.from({ length: 5 }).keys()].map((key) => (
+          <ul className={chatList}>
+            {[...Array.from({ length: 6 }).keys()].map((key) => (
               <ChatListItem key={key}></ChatListItem>
             ))}
           </ul>
