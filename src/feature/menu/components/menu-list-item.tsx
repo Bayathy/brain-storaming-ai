@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import { css } from "@linaria/core";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { useSetRecoilState } from "recoil";
+
 import { menuActiveStore } from "../api/active-state";
 
 export type MenuListItemProps = {

@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
 import { ChatList } from "./chat-list";
+
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
   title: "ChatList",

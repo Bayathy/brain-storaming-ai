@@ -1,25 +1,22 @@
 import { css } from "@linaria/core";
-import { ChatListItem } from "./components/chat-list-item";
-
 import * as ScrollArea from "@radix-ui/react-scroll-area";
+
+import { ChatListItem } from "./components/chat-list-item";
 
 const chatListContainar = css`
   width: var(--chat-list-width);
   border-radius: 4px;
-
   overflow: hidden;
   height: 100vh;
   position: fixed;
-
-  box-shadow: 0 2px 10px black/.7;
+  box-shadow: 0 2px 10px black/0.7;
   background-color: white;
 
-  --scrollbar-size:8px;
+  --scrollbar-size: 8px;
 `;
 
 const chaListTitle = css`
   font-size: 1.4rem;
-
 `;
 
 const scrollAreaViewPort = css`
@@ -30,20 +27,18 @@ const scrollAreaViewPort = css`
 
 const scrollAreaScrollBar = css`
   display: flex;
-
   user-select: none;
-
   touch-action: none;
   padding: 2px;
 
-  &[data-orientation='vertical'] {
-    width: var(--scrollbar-size)
+  &[data-orientation="vertical"] {
+    width: var(--scrollbar-size);
   }
 `;
 
 const scrollAreaThumb = css`
   flex: 1;
-  background: rgba(0,0,0,0.3);
+  background: rgb(0 0 0 / 30%);
   position: relative;
   border-radius: var(--scrollbar-size);
 
@@ -62,7 +57,7 @@ const scrollAreaThumb = css`
 
 const chatList = css`
   margin: var(--spacing-sm);
-`
+`;
 
 export function ChatList() {
   return (
@@ -71,7 +66,7 @@ export function ChatList() {
         <div className={chatList}>
           <h2 className={chaListTitle}>Chat List</h2>
           <ul>
-            {Array.from(Array(5).keys()).map((key) => (
+            {[...Array.from({ length: 5 }).keys()].map((key) => (
               <ChatListItem key={key}></ChatListItem>
             ))}
           </ul>

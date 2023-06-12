@@ -9,7 +9,7 @@ describe("ui/button", () => {
     expect(screen.getByRole("button", { name: "test" })).toBeInTheDocument();
   });
 
-  test("test clicked", async () => {
+  test("clicked", async () => {
     const clickEvent = jest.fn();
     render(<Button onClick={clickEvent}>test</Button>);
 
