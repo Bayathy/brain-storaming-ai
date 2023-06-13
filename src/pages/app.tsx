@@ -1,5 +1,3 @@
-import { Router, Route } from "wouter";
-
 import { Header } from "../feature/header";
 import { Menu } from "../feature/menu";
 import { RootLayout } from "../shared/Layout/RootLayout/root-layout";
@@ -42,11 +40,7 @@ export function App() {
             ]}
           />
         }
-        content={
-          <Router>
-            <Route path="/" component={Home} />
-          </Router>
-        }
+        content={<Home />}
       />
     </div>
   );

@@ -6,7 +6,9 @@ type HeaderProps = {
 
 const header = css`
   width: 100%;
-  height: 64px;
+  height: var(--header-height);
+  position: fixed;
+  background: white;
 `;
 
 const headerContent = css`

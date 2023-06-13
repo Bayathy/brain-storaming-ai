@@ -12,8 +12,12 @@ export const globalStyle = css`
       --primary: #008cff;
       --secondary: #07ca00;
 
-      --menu-width: 3rem;
+      --header-height: 64px;
+
+      --menu-width: 4rem;
       --chat-list-width: 13rem;
+
+      --border-black: rgba(0, 0, 0, 0.2);
 
       --spacing-sm: 8px;
       --spacing-md: 16px;

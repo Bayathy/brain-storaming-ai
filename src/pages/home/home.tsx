@@ -1,3 +1,5 @@
+import { Chat } from "../../feature/chat";
+
 export function Home() {
-  return <p>test</p>;
+  return <Chat />;
 }

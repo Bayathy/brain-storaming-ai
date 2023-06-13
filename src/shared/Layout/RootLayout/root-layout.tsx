@@ -1,33 +1,26 @@
 import { css } from "@linaria/core";
 
 type RootLayoutProps = {
-  header: React.ReactNode;
   menu: React.ReactNode;
   content: React.ReactNode;
 };
 
 const layout = css`
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
   display: grid;
-  grid-template-columns: var(--menu-width) auto;
+  grid-template-columns: var(--menu-width) 1fr;
+  grid-template-rows: 100%;
 `;
 
-const innerLayout = css`
-  display: grid;
-  gap: 1rem;
-  grid-template-rows: auto 1fr;
+const contentContainer = css`
+  position: relative;
 `;
 
-export function RootLayout({ header, menu, content }: RootLayoutProps) {
+export function RootLayout({ menu, content }: RootLayoutProps) {
   return (
     <div className={layout}>
-      <div>{menu}</div>
-      <div className={innerLayout}>
-        <div>{header}</div>
-        <div>{content}</div>
-      </div>
+      <div className={contentContainer}>{menu}</div>
+      <div className={contentContainer}>{content}</div>
     </div>
   );
 }
