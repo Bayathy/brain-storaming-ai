@@ -1,4 +1,4 @@
-import { ChatList } from "./chat-list";
+import { ChatList } from "./components/chat-list";
 
 import type { Meta, StoryObj } from "@storybook/react";
 

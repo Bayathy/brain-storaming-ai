@@ -1,7 +1,7 @@
 import { css } from "@linaria/core";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 
-import { ChatListItem } from "./components/chat-list-item";
+import { ChatListItem } from "../chat-list-item";
 
 const scrollAreaRoot = css`
   width: var(--chat-list-width);

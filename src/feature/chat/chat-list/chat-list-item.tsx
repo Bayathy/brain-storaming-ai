@@ -20,7 +20,7 @@ const chatListText = css`
 export function ChatListItem() {
   return (
     <li className={chatListItem}>
-      <p className={chatListText}>これはテストです。これはテストです。</p>
+      <p className={chatListText}>This is test</p>
     </li>
   );
 }
