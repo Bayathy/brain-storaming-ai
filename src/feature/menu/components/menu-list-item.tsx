@@ -28,7 +28,7 @@ const menuButton = css`
   }
 
   :hover {
-    background: var(--backgorund);
+    background: var(--background);
   }
 `;
 

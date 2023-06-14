@@ -8,7 +8,7 @@ export const globalStyle = css`
       box-sizing: border-box;
     }
     :root {
-      --backgorund: #ebebeb;
+      --background: #ebebeb;
       --primary: #008cff;
       --secondary: #07ca00;
 
