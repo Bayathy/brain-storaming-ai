@@ -1,9 +1,9 @@
-import { ChatList } from "./components/chat-list";
+import { ChatList } from "./chat-list";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "ChatList",
+  title: "Chat/ChatList",
   component: ChatList,
 } satisfies Meta<typeof ChatList>;
 

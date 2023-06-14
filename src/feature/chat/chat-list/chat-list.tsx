@@ -1,15 +1,18 @@
 import { css } from "@linaria/core";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 
-import { ChatListItem } from "../chat-list-item";
+import { ChatListItem } from "./components/chat-list-item";
+
+const container = css`
+  position: fixed;
+  width: var(--chat-list-width);
+  height: 100%;
+`;
 
 const scrollAreaRoot = css`
-  width: var(--chat-list-width);
   border-radius: 4px;
   overflow: hidden;
-  height: 100vh;
-  position: fixed;
-  box-shadow: 0 2px 10px black/0.7;
+  height: 100%;
   background-color: white;
 
   --scrollbar-size: 8px;
@@ -19,10 +22,12 @@ const chatList = css`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: var(--spacing-lg);
 `;
 
 const chaListTitle = css`
   font-size: 1.4rem;
+  border-bottom: 2px solid var(--secondary);
 `;
 
 const scrollAreaViewPort = css`
@@ -67,23 +72,25 @@ const chatListContainer = css`
 
 export function ChatList() {
   return (
-    <ScrollArea.Root className={scrollAreaRoot}>
-      <ScrollArea.Viewport className={scrollAreaViewPort}>
-        <div className={chatListContainer}>
-          <h2 className={chaListTitle}>Chat List</h2>
-          <ul className={chatList}>
-            {[...Array.from({ length: 6 }).keys()].map((key) => (
-              <ChatListItem key={key}></ChatListItem>
-            ))}
-          </ul>
-        </div>
-      </ScrollArea.Viewport>
-      <ScrollArea.Scrollbar
-        className={scrollAreaScrollBar}
-        orientation="vertical"
-      >
-        <ScrollArea.Thumb className={scrollAreaThumb} />
-      </ScrollArea.Scrollbar>
-    </ScrollArea.Root>
+    <div className={container}>
+      <ScrollArea.Root className={scrollAreaRoot}>
+        <ScrollArea.Viewport className={scrollAreaViewPort}>
+          <div className={chatListContainer}>
+            <h2 className={chaListTitle}>Chat List</h2>
+            <ul className={chatList}>
+              {[...Array.from({ length: 6 }).keys()].map((key) => (
+                <ChatListItem key={key}></ChatListItem>
+              ))}
+            </ul>
+          </div>
+        </ScrollArea.Viewport>
+        <ScrollArea.Scrollbar
+          className={scrollAreaScrollBar}
+          orientation="vertical"
+        >
+          <ScrollArea.Thumb className={scrollAreaThumb} />
+        </ScrollArea.Scrollbar>
+      </ScrollArea.Root>
+    </div>
   );
 }

@@ -17,13 +17,14 @@ const menu = css`
   width: var(--menu-width);
   background-color: white;
   justify-content: center;
-  z-index: 1000;
+  border-right: 1px solid var(--border-black);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 `;
 
 const menuList = css`
-  padding-inline: var(--spacing-sm);
+  width: 100%;
   display: flex;
+  padding-inline:var(--spacing-sm);
   flex-direction: column;
   gap: 1rem;
   margin-top: 4rem;

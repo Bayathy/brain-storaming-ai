@@ -14,9 +14,13 @@ export type MenuListItemProps = {
   acitveState: "active" | "none";
 };
 
+const menuListItem = css`
+  width:100%;
+`
+
 const menuButton = css`
-  height: 2rem;
-  width: 2rem;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 
   & [data-active="active"] {
@@ -30,7 +34,6 @@ const menuButton = css`
 
 const menuIcon = css`
   margin: auto;
-  font-size: 1.5rem;
 `;
 
 const toolTipContent = css`
@@ -70,7 +73,7 @@ export const MenuListItem = memo<MenuListItemProps>(function ({
   const setActiveState = useSetRecoilState(menuActiveStore);
 
   return (
-    <li>
+    <li className={menuListItem}>
       <Tooltip.Provider>
         <Tooltip.Root delayDuration={300}>
           <Tooltip.Trigger asChild>
@@ -83,6 +86,7 @@ export const MenuListItem = memo<MenuListItemProps>(function ({
               <Icon
                 data-active={acitveState}
                 className={menuIcon}
+                width={"70%"}
                 icon={icon}
               />
             </button>
