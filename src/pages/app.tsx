@@ -1,6 +1,5 @@
-import { Header } from "../feature/header";
 import { Menu } from "../feature/menu";
-import { RootLayout } from "../shared/Layout/RootLayout/root-layout";
+import { RootLayout } from "../shared/Layout/RootLayout";
 import { globalStyle } from "../style/global";
 
 import { Home } from "./home";
@@ -9,7 +8,6 @@ export function App() {
   return (
     <div className={globalStyle}>
       <RootLayout
-        header={<Header titleText="AI-storming" />}
         menu={
           <Menu
             menuListItems={[

@@ -26,7 +26,7 @@ export const globalStyle = css`
     }
 
     body {
-      background-color: var(--backgorund);
+      background-color: var(--background);
       font-family: "Noto Sans JP", sans-serif;
     }
   }
