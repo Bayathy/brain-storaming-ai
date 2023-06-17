@@ -9,4 +9,12 @@ const meta = {
 
 export default meta;
 
-export const Default: StoryObj<typeof ChatList> = {};
+export const Default: StoryObj<typeof ChatList> = {
+  args: {
+    chatListItems: [
+      { id: "1", title: "title1" },
+      { id: "1", title: "title1" },
+      { id: "1", title: "title1" },
+    ],
+  },
+};

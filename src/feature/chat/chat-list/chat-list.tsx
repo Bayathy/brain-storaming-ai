@@ -3,6 +3,12 @@ import * as ScrollArea from "@radix-ui/react-scroll-area";
 
 import { ChatListItem } from "./components/chat-list-item";
 
+import type { ChatListItemProps } from "./components/chat-list-item";
+
+type ChatListProps = {
+  chatListItems: ChatListItemProps[];
+};
+
 const container = css`
   position: fixed;
   width: var(--chat-list-width);
@@ -70,7 +76,7 @@ const chatListContainer = css`
   margin: var(--spacing-sm);
 `;
 
-export function ChatList() {
+export function ChatList({ chatListItems }: ChatListProps) {
   return (
     <div className={container}>
       <ScrollArea.Root className={scrollAreaRoot}>
@@ -78,8 +84,8 @@ export function ChatList() {
           <div className={chatListContainer}>
             <h2 className={chaListTitle}>Chat List</h2>
             <ul className={chatList}>
-              {[...Array.from({ length: 6 }).keys()].map((key) => (
-                <ChatListItem key={key}></ChatListItem>
+              {chatListItems.map((index) => (
+                <ChatListItem key={index.id} {...index} />
               ))}
             </ul>
           </div>
