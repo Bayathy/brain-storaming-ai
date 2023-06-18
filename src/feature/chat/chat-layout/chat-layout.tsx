@@ -10,7 +10,6 @@ const chatLayout = css`
   width: 100%;
   height: 100%;
   grid-template-columns: var(--chat-list-width) 1fr;
-  gap: 1rem;
 `;
 
 export function ChatLayout({ chatList, chatContent }: ChatLayoutProps) {

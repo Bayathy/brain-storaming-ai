@@ -10,15 +10,17 @@ const layout = css`
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  margin-inline: var(--spacing-md);
+  gap: var(--spacing-lg);
 `;
 
 const pageTitle = css`
-  font-size: 2rem;
-  margin-top: var(--spacing-md);
+  font-size: 1.4rem;
+  background-color: white;
+  padding: var(--spacing-sm);
 `;
 
 const pageContent = css`
+  margin-inline: var(--spacing-md);
   height: 100%;
 `;
 
