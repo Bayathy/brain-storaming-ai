@@ -15,8 +15,8 @@ export type MenuListItemProps = {
 };
 
 const menuListItem = css`
-  width:100%;
-`
+  width: 100%;
+`;
 
 const menuButton = css`
   height: 100%;
