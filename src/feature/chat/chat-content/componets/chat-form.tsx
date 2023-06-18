@@ -1,22 +1,37 @@
 import { css } from "@linaria/core";
 
 import { Button } from "../../../../shared/Button";
+
 const chatForm = css`
-  position: fixed;
+  background-color: white;
+  border-radius: 10px;
   display: flex;
-  width: 100%;
+  position: fixed;
+  bottom: 32px;
+  padding: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 30rem;
 `;
 
-const inputForm = css`
-  border-radius: var(--spacing-sm);
-  width: 80%;
+const chatFormInput = css`
+  outline: 2px solid var(--border-black);
+  border-radius: 10px;
+  height: 2rem;
+  padding: var(--spacing-sm);
+  width: 70%;
+
+  :focus {
+    outline: 2px solid var(--primary);
+  }
 `;
 
 export function ChatForm() {
   return (
     <form className={chatForm}>
-      <input type="text" className={inputForm} />
-      <Button type="submit">追加</Button>
+      <input type="text" className={chatFormInput} />
+      <Button>送信する</Button>
     </form>
   );
 }

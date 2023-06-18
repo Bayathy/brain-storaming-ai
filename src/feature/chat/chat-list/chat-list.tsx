@@ -11,15 +11,17 @@ type ChatListProps = {
 
 const container = css`
   position: fixed;
+  background-color: white;
   width: var(--chat-list-width);
   height: 100%;
+  padding: var(--spacing-sm);
+  padding-top: var(--spacing-md);
 `;
 
 const scrollAreaRoot = css`
   border-radius: 4px;
   overflow: hidden;
   height: 100%;
-  background-color: white;
 
   --scrollbar-size: 8px;
 `;
@@ -72,17 +74,13 @@ const scrollAreaThumb = css`
   }
 `;
 
-const chatListContainer = css`
-  margin: var(--spacing-sm);
-`;
-
 export function ChatList({ chatListItems }: ChatListProps) {
   return (
     <div className={container}>
+      <h2 className={chaListTitle}>Chat List</h2>
       <ScrollArea.Root className={scrollAreaRoot}>
         <ScrollArea.Viewport className={scrollAreaViewPort}>
-          <div className={chatListContainer}>
-            <h2 className={chaListTitle}>Chat List</h2>
+          <div>
             <ul className={chatList}>
               {chatListItems.map((index) => (
                 <ChatListItem key={index.id} {...index} />
