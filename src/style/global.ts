@@ -10,7 +10,7 @@ export const globalStyle = css`
     :root {
       --background: #ebebeb;
       --primary: #008cff;
-      --secondary: #07ca00;
+      --secondary: #c3ffc1;
 
       --header-height: 64px;
 

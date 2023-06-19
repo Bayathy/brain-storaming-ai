@@ -2,7 +2,6 @@ import { css } from "@linaria/core";
 
 import { PageLayout } from "../../../shared/Layout/PageLayout";
 
-import { ChatBox } from "./componets/chat-box";
 import { ChatForm } from "./componets/chat-form";
 
 const contentsContainer = css`
@@ -11,18 +10,25 @@ const contentsContainer = css`
   height: 100%;
 `;
 
+const chatFormContainer = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const chatContainer = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-lg);
 `;
 
 export function ChatContent() {
   return (
     <PageLayout title="〇〇するアイデア">
       <div className={contentsContainer}>
-        <div className={chatContainer}>
-          <ChatBox />
+        <div className={chatContainer}></div>
+        <div className={chatFormContainer}>
           <ChatForm />
         </div>
       </div>
