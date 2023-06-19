@@ -2,7 +2,10 @@ import { css } from "@linaria/core";
 
 import { PageLayout } from "../../../shared/Layout/PageLayout";
 
+import { ChatBox } from "./componets/chat-box";
 import { ChatForm } from "./componets/chat-form";
+
+import type { ChatRoom } from "../api/store/types";
 
 const contentsContainer = css`
   position: relative;
@@ -23,15 +26,23 @@ const chatContainer = css`
   gap: var(--spacing-lg);
 `;
 
-export function ChatContent() {
+export function ChatContent({ chatItemList, title }: Partial<ChatRoom>) {
   return (
-    <PageLayout title="〇〇するアイデア">
-      <div className={contentsContainer}>
-        <div className={chatContainer}></div>
-        <div className={chatFormContainer}>
-          <ChatForm />
-        </div>
-      </div>
-    </PageLayout>
+    <>
+      {chatItemList && title && (
+        <PageLayout title={title}>
+          <div className={contentsContainer}>
+            <div className={chatContainer}>
+              {chatItemList.map((index) => (
+                <ChatBox {...index} key={index.id} />
+              ))}
+            </div>
+            <div className={chatFormContainer}>
+              <ChatForm />
+            </div>
+          </div>
+        </PageLayout>
+      )}
+    </>
   );
 }

@@ -6,3 +6,8 @@ export const chatRoomListStore = atom<ChatRoom[]>({
   key: "chatListState",
   default: [],
 });
+
+export const selectChatRoomStore = atom<ChatRoom | null>({
+  key: "selectChatRoomState",
+  default: undefined,
+});

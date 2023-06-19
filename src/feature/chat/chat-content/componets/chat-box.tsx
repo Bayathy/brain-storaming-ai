@@ -1,9 +1,7 @@
 import { InlineIcon } from "@iconify/react";
 import { css } from "@linaria/core";
 
-type ChatBoxProps = {
-  authorIsBot?: boolean;
-};
+import type { ChatItem } from "../../api/store/types";
 
 const botChatBox = css`
   background-color: white;
@@ -23,21 +21,21 @@ const botChatBox = css`
   }
 `;
 
-export function ChatBox({ authorIsBot }: ChatBoxProps) {
+export function ChatBox({ author, text }: ChatItem) {
   return (
     <>
-      {authorIsBot ? (
+      {author === "bot" ? (
         <div data-author="bot" className={botChatBox}>
           <InlineIcon
             width={"auto"}
             height={"2rem"}
             icon={"fluent:bot-20-filled"}
           />
-          <p>〇〇が考えられます。</p>
+          <p>{text}</p>
         </div>
       ) : (
         <div data-author="user" className={botChatBox}>
-          <p>〇〇が考えられます。</p>
+          <p>{text}</p>
           <InlineIcon
             width={"auto"}
             height={"2rem"}

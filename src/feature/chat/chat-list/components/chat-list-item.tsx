@@ -1,9 +1,6 @@
 import { css } from "@linaria/core";
 
-export type ChatListItemProps = {
-  id: string;
-  title: string;
-};
+import type { ChatRoom } from "../../api/store/types";
 
 const chatListItem = css`
   height: 6rem;
@@ -37,7 +34,7 @@ const chatListButton = css`
   align-items: start;
 `;
 
-export function ChatListItem({ title, id }: ChatListItemProps) {
+export function ChatListItem({ title, id }: ChatRoom) {
   return (
     <li className={chatListItem}>
       <button className={chatListButton} onClick={() => console.log(id)}>

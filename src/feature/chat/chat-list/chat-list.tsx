@@ -1,12 +1,14 @@
 import { css } from "@linaria/core";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 
+import { Button } from "../../../shared/Button";
+
 import { ChatListItem } from "./components/chat-list-item";
 
-import type { ChatListItemProps } from "./components/chat-list-item";
+import type { ChatRoom } from "../api/store/types";
 
 type ChatListProps = {
-  chatListItems: ChatListItemProps[];
+  chatRoomList: ChatRoom[];
 };
 
 const container = css`
@@ -16,6 +18,12 @@ const container = css`
   height: 100%;
   padding: var(--spacing-sm);
   padding-top: var(--spacing-md);
+`;
+
+const buttonBox = css`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--spacing-sm);
 `;
 
 const scrollAreaRoot = css`
@@ -74,15 +82,18 @@ const scrollAreaThumb = css`
   }
 `;
 
-export function ChatList({ chatListItems }: ChatListProps) {
+export function ChatList({ chatRoomList }: ChatListProps) {
   return (
     <div className={container}>
       <h2 className={chaListTitle}>Chat List</h2>
+      <div className={buttonBox}>
+        <Button>追加する</Button>
+      </div>
       <ScrollArea.Root className={scrollAreaRoot}>
         <ScrollArea.Viewport className={scrollAreaViewPort}>
           <div>
             <ul className={chatList}>
-              {chatListItems.map((index) => (
+              {chatRoomList.map((index) => (
                 <ChatListItem key={index.id} {...index} />
               ))}
             </ul>
