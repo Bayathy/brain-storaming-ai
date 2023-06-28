@@ -2,7 +2,8 @@
   "extends": [
     "@linaria/stylelint-config-standard-linaria",
     "stylelint-config-standard",
-    "stylelint-config-recommended"
+    "stylelint-config-prettier",
+    "stylelint-config-recess-order"
   ],
   "overrides": [
     {
