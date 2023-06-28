@@ -7,21 +7,21 @@ type PageLayoutProps = {
 
 const layout = css`
   position: relative;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: var(--spacing-lg);
+  min-height: 100vh;
 `;
 
 const pageTitle = css`
+  padding: var(--spacing-sm);
   font-size: 1.4rem;
   background-color: white;
-  padding: var(--spacing-sm);
 `;
 
 const pageContent = css`
-  margin-inline: var(--spacing-md);
   height: 100%;
+  margin-inline: var(--spacing-md);
 `;
 
 export function PageLayout({ title, children }: PageLayoutProps) {

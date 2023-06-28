@@ -19,8 +19,8 @@ const menuListItem = css`
 `;
 
 const menuButton = css`
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 
   & [data-active="active"] {
@@ -37,15 +37,15 @@ const menuIcon = css`
 `;
 
 const toolTipContent = css`
-  background-color: var(--primary);
-  color: white;
-  border-radius: 10px;
   padding: var(--spacing-sm) var(--spacing-lg);
+  color: white;
+  background-color: var(--primary);
+  border-radius: 10px;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 75%);
+  animation-name: slide-left-and-fade;
   animation-duration: 200ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
-  animation-name: slide-left-and-fade;
 
   @keyframes slide-left-and-fade {
     from {

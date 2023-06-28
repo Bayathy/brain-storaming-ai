@@ -8,9 +8,9 @@ type ButtonProps = {
 } & ComponentPropsWithoutRef<"button">;
 
 const buttonStyle = css`
+  padding: 0.5rem 1rem;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: 10px;
 
   &[data-color="primary"] {

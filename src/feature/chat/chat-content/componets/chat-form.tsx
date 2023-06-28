@@ -3,24 +3,24 @@ import { css } from "@linaria/core";
 import { Button } from "../../../../shared/Button";
 
 const chatForm = css`
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
   position: fixed;
   bottom: 32px;
-  padding: var(--spacing-md);
-  justify-content: center;
-  align-items: center;
+  display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
   width: 30rem;
+  padding: var(--spacing-md);
+  background-color: white;
+  border-radius: 10px;
 `;
 
 const chatFormInput = css`
-  outline: 2px solid var(--border-black);
-  border-radius: 10px;
+  width: 70%;
   height: 2rem;
   padding: var(--spacing-sm);
-  width: 70%;
+  border-radius: 10px;
+  outline: 2px solid var(--border-black);
 
   :focus {
     outline: 2px solid var(--primary);

@@ -4,13 +4,13 @@ import type { ChatRoom } from "../../api/store/types";
 
 const chatListItem = css`
   height: 6rem;
-  border-radius: 10px;
-  border: 2px solid var(--border-black);
   padding: var(--spacing-sm);
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
   overflow: hidden;
+  border: 2px solid var(--border-black);
+  border-radius: 10px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
 
   :hover {
     background-color: var(--background);
@@ -18,20 +18,20 @@ const chatListItem = css`
 `;
 
 const chatListText = css`
-  word-wrap: break-word;
   width: 100%;
   height: 100%;
-  text-overflow: clip;
   font-size: 1rem;
+  text-overflow: clip;
+  word-wrap: break-word;
   cursor: pointer;
 `;
 
 const chatListButton = css`
+  display: flex;
+  align-items: start;
+  justify-content: start;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: start;
 `;
 
 export function ChatListItem({ title, id }: ChatRoom) {

@@ -5,16 +5,16 @@ type HeaderProps = {
 };
 
 const header = css`
+  position: fixed;
   width: 100%;
   height: var(--header-height);
-  position: fixed;
   background: white;
 `;
 
 const headerContent = css`
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
   padding-inline: var(--spacing-sm);
   margin: auto;
 `;

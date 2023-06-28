@@ -22,8 +22,8 @@ const chatFormContainer = css`
 const chatContainer = css`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--spacing-lg);
+  align-items: center;
 `;
 
 export function ChatContent({ chatItemList, title }: Partial<ChatRoom>) {

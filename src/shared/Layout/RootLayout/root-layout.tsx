@@ -6,10 +6,10 @@ type RootLayoutProps = {
 };
 
 const layout = css`
-  width: 100%;
   display: grid;
-  grid-template-columns: var(--menu-width) 1fr;
   grid-template-rows: 100%;
+  grid-template-columns: var(--menu-width) 1fr;
+  width: 100%;
 `;
 
 const contentContainer = css`

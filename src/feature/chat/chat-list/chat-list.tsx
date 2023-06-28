@@ -1,7 +1,7 @@
 import { css } from "@linaria/core";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 
-import { Button } from "../../../shared/Button";
+import { ChatCreateModal } from "../chat-create-modal/chat-create-modal";
 
 import { ChatListItem } from "./components/chat-list-item";
 
@@ -13,11 +13,11 @@ type ChatListProps = {
 
 const container = css`
   position: fixed;
-  background-color: white;
   width: var(--chat-list-width);
   height: 100%;
   padding: var(--spacing-sm);
   padding-top: var(--spacing-md);
+  background-color: white;
 `;
 
 const buttonBox = css`
@@ -27,9 +27,9 @@ const buttonBox = css`
 `;
 
 const scrollAreaRoot = css`
-  border-radius: 4px;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
 
   --scrollbar-size: 8px;
 `;
@@ -54,9 +54,9 @@ const scrollAreaViewPort = css`
 
 const scrollAreaScrollBar = css`
   display: flex;
-  user-select: none;
-  touch-action: none;
   padding: 2px;
+  touch-action: none;
+  user-select: none;
 
   &[data-orientation="vertical"] {
     width: var(--scrollbar-size);
@@ -64,21 +64,21 @@ const scrollAreaScrollBar = css`
 `;
 
 const scrollAreaThumb = css`
+  position: relative;
   flex: 1;
   background: rgb(0 0 0 / 30%);
-  position: relative;
   border-radius: var(--scrollbar-size);
 
   ::before {
-    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
     min-width: 44px;
+    height: 100%;
     min-height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
   }
 `;
 
@@ -87,7 +87,7 @@ export function ChatList({ chatRoomList }: ChatListProps) {
     <div className={container}>
       <h2 className={chaListTitle}>Chat List</h2>
       <div className={buttonBox}>
-        <Button>追加する</Button>
+        <ChatCreateModal />
       </div>
       <ScrollArea.Root className={scrollAreaRoot}>
         <ScrollArea.Viewport className={scrollAreaViewPort}>

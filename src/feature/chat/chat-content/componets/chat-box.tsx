@@ -4,13 +4,13 @@ import { css } from "@linaria/core";
 import type { ChatItem } from "../../api/store/types";
 
 const botChatBox = css`
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  width: 30rem;
+  padding: var(--spacing-sm);
   background-color: white;
   border-radius: 10px;
-  padding: var(--spacing-sm);
-  width: 30rem;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
 
   &[data-author="bot"] {
     background-color: var(--secondary);
