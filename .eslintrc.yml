@@ -6,6 +6,8 @@ env:
 
 extends:
   - "@bayathy/eslint-config"
+  - "@bayathy/eslint-config-react"
+  - "@bayathy/eslint-config-jest"
   - plugin:storybook/recommended
 
 plugins:
